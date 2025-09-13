@@ -111,21 +111,6 @@ app.delete("/listings/:id", wrapAsync(async (req, res) => {
 }));
 
 
-// app.get("/test", async (req, res) => {
-//     let sampleListing = new Listing({
-//         title : "My New Villa",
-//         description : "By the Beach",
-//         price : 1200,
-//         location : "Calangate, Goa",
-//         country : "India"
-//     });
-
-//     await sampleListing.save()
-//     .then(()=> console.log("Inserted Successfully")).
-//     catch((err)=>(console.log(err)));
-
-//     res.send("Successfull testing")
-// });
 
 // 404 handler (placed after all valid routes)
 app.use((req, res, next) => {
