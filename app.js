@@ -48,6 +48,23 @@ app.get('/', (req, res) => {
     console.log("connected with local Host");
 })
 
+
+// app.get("/test", async (req, res) => {
+//     let sampleListing = new Listing({
+//         title : "My New Villa",
+//         description : "By the Beach",
+//         price : 1200,
+//         location : "Calangate, Goa",
+//         country : "India"
+//     });
+
+//     await sampleListing.save()
+//     .then(()=> console.log("Inserted Successfully")).
+//     catch((err)=>(console.log(err)));
+
+//     res.send("Successfull testing")
+// });
+
 const validateListing = (req, res, next) => {
     let { error } = listingSchema.validate(req.body);
 
